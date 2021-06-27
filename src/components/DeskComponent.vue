@@ -1,53 +1,34 @@
 <template>
-    <div>
-        <div class="gridContainer">
-            <div class="gridItem">
-                <p>1</p>
-            </div>
-        <div class="gridContainer">
-            <div class="gridItem">
-                <p>2</p>
-            </div>
+        <div
+            :id="id"
+            class="board"
+            @dragover.prevent
+            @drop.prevent="drop"
+        >
+            <slot />
         </div>
-        <div class="gridContainer">
-            <div class="gridItem">
-                <p>3</p>
-            </div>
-        </div>
-        <div class="gridContainer">
-            <div class="gridItem">
-                <p>4</p>
-            </div>
-        </div>
-        <div class="gridContainer">
-            <div class="gridItem">
-                <p>5</p>
-            </div>
-        </div>
-        </div>
-    </div>
+
+        
 </template>
 
 <script>
 export default {
-    name: 'DeskComponent',
-    props: {
-        msg: String
+    props: ['id'],
+    methods: {
+        drop: e => {
+            const  card_id = e.dataTransfer.getData('card_id');
+
+            const card = document.getElementById(card_id);
+            
+            card.style.display = "block";
+            
+            e.target.appendChild(card);
+            
+         }
     }
 }
 </script>
 
 <style scoped>
-.gridContainer{
-    display: grid;
-    grid-template-columns: auto auto auto auto auto;
-    grid-gap: 30px;
-}
 
-.gridItem{
-    border: 1px solid black;
-    width: 150px;
-    height: 150px;
-
-}
 </style>

@@ -1,14 +1,14 @@
 <template>
+
     <div
     :id="id"
-    class="card"
+    class="redBox"
     :draggable="draggable"
     @dragstart="dragStart"
     @dragover.stop
     >
         <slot />
     </div>
-
 
 </template>
 

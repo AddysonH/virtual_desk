@@ -1,17 +1,19 @@
 <template>
   <div id="app">
-    <main class="flexbox">
-<DeskComponent id=board-1>
-<AppComponent id="card-1" draggable="true">
-<p>card 1</p>
-</AppComponent>
-</DeskComponent>
+      <main class="flexbox">
 
-<DeskComponent id=board-1>
-<AppComponent id="card-1" draggable="true">
-<p>card 2</p>
-</AppComponent>
-</DeskComponent>
+      <DeskComponent id=board-1>
+          <AppComponent id="card-1" draggable="true">
+              <p>card 1</p>
+          </AppComponent>
+      </DeskComponent>
+
+
+      <!-- <DeskComponent id=board-1>
+          <AppComponent id="card-1" draggable="true">
+              <p>card 2</p>
+          </AppComponent>
+      </DeskComponent> -->
 
     </main>
   </div>
@@ -67,9 +69,25 @@ body{
 .flexbox .board .card {
   padding: 15px 25px;
   background-color: #F3f3f3;
+  }
 
+.redBox {
+  width: 100px;
+  height: 100px;
+  background-color: red;
   cursor: pointer;
   margin-bottom: 15px;
-  }
+}
+
+.grid {
+display: grid;
+grid-template-columns: auto auto auto auto auto;
+}
+
+.gridItem {
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+}
 
 </style>

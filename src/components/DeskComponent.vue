@@ -1,12 +1,36 @@
 <template>
-        <div
-            :id="id"
-            class="board"
-            @dragover.prevent
-            @drop.prevent="drop"
-        >
+
+<div
+    :id="id"
+    class="grid"
+    @dragover.prevent
+    @drop.prevent="drop"
+    >
+
+    <div class="gridItem">
             <slot />
-        </div>
+    </div>
+    <div class="gridItem">
+            
+    </div>
+    <div class="gridItem">
+            
+    </div>
+    <div class="gridItem">
+            
+    </div>
+    <div class="gridItem">
+            
+    </div>
+    <div class="gridItem">
+            
+    </div>
+    <div class="gridItem">
+            
+    </div>
+
+</div>
+
 
         
 </template>

@@ -2,18 +2,11 @@
   <div id="app">
       <main class="flexbox">
 
-      <DeskComponent id=board-1>
+      <DeskComponent id=grid-1>
           <AppComponent id="card-1" draggable="true">
               <p>card 1</p>
           </AppComponent>
       </DeskComponent>
-
-
-      <!-- <DeskComponent id=board-1>
-          <AppComponent id="card-1" draggable="true">
-              <p>card 2</p>
-          </AppComponent>
-      </DeskComponent> -->
 
     </main>
   </div>
@@ -42,31 +35,31 @@ body{
 
 .flexbox {
   display: flex;
-  justify-content: space-between;
+  /* justify-content: space-between; */
 
   width:100%;
   max-width: 768px;
-  height: 100vh;
+  /* height: 100vh; */
 
-  overflow: hidden;
+  /* overflow: hidden; */
 
   margin: 0 auto;
-  padding: 15px;
+  /* padding: 15px; */
 }
 
 .flexbox .board {
   display: flex;
   flex-direction: column;
 
-  width: 100%;
-  max-width: 300px;
+  /* width: 100%; */
+  /* max-width: 300px; */
 
   background-color: #313131;
 
-  padding:15px;
+  /* padding:15px; */
 }
 
-.flexbox .board .card {
+.flexbox {
   padding: 15px 25px;
   background-color: #F3f3f3;
   }

@@ -7,8 +7,8 @@
     @drop.prevent="drop"
     >
 
-    <div class="gridItem">
-            <slot />
+     <div class="gridItem">
+           <slot /> 
     </div>
     <div class="gridItem">
             
@@ -93,5 +93,22 @@ export default {
 </script>
 
 <style scoped>
+a{
+    background-color: orange;
+    text-decoration: none;
+    padding: 15px 25px;
+    font-family: sans-serif;
+    font-size: 25px;
+    color: #fff;
+    border-radius: 10px;
+    display: inline-block;
+}
+
+a:hover{
+background-color:blue;
+-webkit-box-shadow: 0px 0px 100px 0px rgb(10, 14, 230);
+-moz-box-shadow: 0px 0px 100px 0px rgba(10, 14, 230);
+box-shadow: 0px 0px 100px 0px rgba(10, 14, 230);
+}
 
 </style>

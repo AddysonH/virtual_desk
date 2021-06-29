@@ -8,8 +8,8 @@
   </button>
   <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"  @dragover.prevent @drop.prevent="drop">
     <AppComponent id="grid" draggable="true"><p>App 1</p></AppComponent>
-    <a class="dropdown-item" href="#">Another action</a>
-    <a class="dropdown-item" href="#">Something else here</a>
+    <AppComponent class="purpleBox" id="grid" draggable="true"><p>App 2</p></AppComponent>
+    <AppComponent class="greenBox" id="grid" draggable="true"><p>App 3</p></AppComponent>  
   </div>
   
 </div>

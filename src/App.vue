@@ -50,6 +50,20 @@ body{
   cursor: pointer;
   text-align: center;
 }
+.greenBox {
+  width: 100px;
+  height: 100px;
+  background-color: green;
+  cursor: pointer;
+  text-align: center;
+}
+.purpleBox {
+  width: 100px;
+  height: 100px;
+  background-color: purple;
+  cursor: pointer;
+  text-align: center;
+}
 
 .grid {
 display: grid;
@@ -62,5 +76,10 @@ grid-template-columns: auto auto auto auto auto;
   width: 150px;
   margin:0 auto;
 }
-
+.gridItem:hover{
+background-color:blue;
+-webkit-box-shadow: 0px 0px 100px 0px rgb(10, 14, 230);
+-moz-box-shadow: 0px 0px 100px 0px rgba(10, 14, 230);
+box-shadow: 0px 0px 100px 0px rgba(10, 14, 230);
+}
 </style>

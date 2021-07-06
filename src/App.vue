@@ -77,9 +77,8 @@ grid-template-columns: auto auto auto auto auto;
   margin:0 auto;
 }
 .gridItem:hover{
-background-color:blue;
--webkit-box-shadow: 0px 0px 100px 0px rgb(10, 14, 230);
--moz-box-shadow: 0px 0px 100px 0px rgba(10, 14, 230);
-box-shadow: 0px 0px 100px 0px rgba(10, 14, 230);
+border: 1px solid rgb(36, 247, 36);
 }
+
+
 </style>

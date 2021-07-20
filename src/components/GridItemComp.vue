@@ -1,45 +1,37 @@
 <template>
-<div>
-    <div>
-        <div class="gridItem"
-            :id="id"
-            @dragover.prevent
-            @drop.prevent="drop"
-        >
-           <slot /> 
-        </div>
-        <div class="gridItem">
-           <slot /> 
-        </div>
-        <div class="gridItem">
-           <slot /> 
-        </div>
-        <div class="gridItem">
-           <slot /> 
-        </div>
-        <div class="gridItem">
-           <slot /> 
-        </div>
-    </div>     
-</div>
-        
+    <div class="gridItem">
+        <draggable :square="squareOne" group="apps">
+          
+        </draggable>
+    </div>    
 </template>
 
 
 <script>
-export default{
-    name: 'GridItemComp',
-    props:[],
-    methods:{
-        drop: e => {
-            const card_id = e.dataTransfer.getData('card_id');
-
-            const card = document.getElementById(card_id);
-
-            card.style.display="block";
-
-            e.target.appendChild(card);
-        }
+import draggable from "vuedraggable";
+export default {
+    name: 'Squares',
+    components:{
+      draggable
+    },
+    props: ['id','draggable','square'],
+data () {
+    return { 
+    squareOne: [],
     }
+    },
 }
 </script>
+
+<style>
+.gridItem {
+  border: 1px solid black;
+  height: 150px;
+  width: 150px;
+  margin:0 auto;
+}
+.gridItem:hover{
+  border: 1px solid rgb(36, 247, 36);
+}
+
+</style>

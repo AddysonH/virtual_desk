@@ -6,10 +6,8 @@
   <button class="btn btn-secondary dropdown-toggle" type="button" id="dropdownMenuButton" data-toggle="dropdown" aria-haspopup="true" aria-expanded="false">
     Dropdown button
   </button>
-  <div class="dropdown-menu" aria-labelledby="dropdownMenuButton"  @dragover.prevent @drop.prevent="drop">
-    <AppComponent id="grid" draggable="true"><p>App 1</p></AppComponent>
-    <AppComponent class="purpleBox" id="grid" draggable="true"><p>App 2</p></AppComponent>
-    <AppComponent class="greenBox" id="grid" draggable="true"><p>App 3</p></AppComponent>  
+  <div class="dropdown-menu drop-zone" aria-labelledby="dropdownMenuButton" @drop='onDrop($event, 1)' @dragover.prevent @dragenter.prevent>
+    <AppComponent id="grid"><p>App 1</p></AppComponent>
   </div>
   
 </div>

@@ -3,8 +3,7 @@
       <NavbarComponent/>
 
       <main class="flexbox">
-      <DeskComponent id=grid-1/>
-          
+      <DeskComponent id=grid-1/>   
       </DeskComponent>
 
       <div class="drop-zone" @drop='onDrop($event, 1)' @dragover.prevent @dragenter.prevent>
@@ -57,12 +56,13 @@ data () {
     computed: {
 
       listOne () {
-          return this.items.filter(item => item.list === 1)
+          return this.items.filter(items => items.list === 1)
       },
       listTwo (){
         return this.items.filter(items => items.list ===2)
       }
     },
+    
 methods: {
 
   startDrag: (evt, item) => {
@@ -80,7 +80,7 @@ methods: {
 }
 </script>
 
-<style scoped>
+<style>
 
 body{
   background-color: #f3f3f3;
@@ -98,7 +98,7 @@ body{
   background-color: #F3f3f3;
 }
 
-.redBox {
+/* .redBox {
   width: 100px;
   height: 100px;
   background-color: red;
@@ -119,7 +119,7 @@ body{
   background-color: purple;
   cursor: pointer;
   text-align: center;
-}
+} */
 
 .grid {
   display: grid;

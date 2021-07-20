@@ -6,7 +6,22 @@
 <GridItemComp />
 <GridItemComp />
 <GridItemComp />
- 
+<GridItemComp />
+<GridItemComp />
+<GridItemComp />
+<GridItemComp />
+<GridItemComp />
+<GridItemComp />
+<GridItemComp />
+<GridItemComp />
+<GridItemComp />
+<GridItemComp />
+<GridItemComp />
+<GridItemComp />
+<GridItemComp />
+<GridItemComp />
+<GridItemComp />
+
 </div>    
 </template>
 
@@ -21,7 +36,7 @@ export default{
 }
 </script>
 
-<style scoped>
+<style>
 
 
 </style>

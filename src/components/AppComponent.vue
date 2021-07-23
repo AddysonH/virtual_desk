@@ -2,7 +2,7 @@
 <div>
     <div class="drop-zone" >
             <draggable :app="appList" group="apps">
-              <div class="app" v-for="element in appList" :key="element.title">
+              <div class="app" v-for="element in appList" :key="element.id">
                   {{element.title}}
               </div>
             </draggable>
@@ -22,36 +22,46 @@ export default{
     data () {
     return { 
       appList:[
-        {title: 'App 1'},
-        {title: 'App 2'},
-        {title: 'App 3'}
+        {
+        title: 'App 1',
+        id: 1
+        },
+
+        {
+          title: 'App 2',
+          id:2
+        },
+        {
+          title: 'App 3',
+          id:3
+        }
       ]
     }
     },
-    computed: {
+    // computed: {
 
-      listOne () {
-          return this.items.filter(items => items.list === 1)
-      },
-      listTwo (){
-        return this.items.filter(items => items.list ===2)
-      }
-    },
+    //   listOne () {
+    //       return this.items.filter(items => items.list === 1)
+    //   },
+    //   listTwo (){
+    //     return this.items.filter(items => items.list ===2)
+    //   }
+    // },
     
-methods: {
+// methods: {
 
-  startDrag: (evt, item) => {
-    evt.dataTransfer.dropEffect = 'move'
-    evt.dataTransfer.effectAllowed = 'move'
-    evt.dataTransfer.setData('itemID', item.id)
-  },
+//   startDrag: (evt, item) => {
+//     evt.dataTransfer.dropEffect = 'move'
+//     evt.dataTransfer.effectAllowed = 'move'
+//     evt.dataTransfer.setData('itemID', item.id)
+//   },
 
-  onDrop (evt, list) {
-    const itemID = evt.dataTransfer.getData('itemID')
-    const item = this.items.find(item => item.id == itemID)
-    item.list = list
-  }
-}
+//   onDrop (evt, list) {
+//     const itemID = evt.dataTransfer.getData('itemID')
+//     const item = this.items.find(item => item.id == itemID)
+//     item.list = list
+//   }
+// }
 }
 </script>
 

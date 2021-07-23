@@ -1,8 +1,10 @@
 <template>
-    <div class="gridItem">
-        <draggable :square="squareOne" group="apps">
+    <div>
+      <div class="gridItem">
+        <draggable :square="squareOne" group="apps" >
           
         </draggable>
+        </div>
     </div>    
 </template>
 
@@ -29,9 +31,11 @@ data () {
   height: 150px;
   width: 150px;
   margin:0 auto;
+  
 }
 .gridItem:hover{
   border: 1px solid rgb(36, 247, 36);
 }
+
 
 </style>

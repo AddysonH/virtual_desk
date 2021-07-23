@@ -1,8 +1,8 @@
 <template>
 <div>
-    <div class="drop-zone">
+    <div class="drop-zone" >
             <draggable :app="appList" group="apps">
-              <div v-for="element in appList" :key="element.title">
+              <div class="app" v-for="element in appList" :key="element.title">
                   {{element.title}}
               </div>
             </draggable>
@@ -59,11 +59,16 @@ methods: {
 
 .app{
     background-color: red;
-    width: 90px;
-    height: 20px;
+    width: 150px;
+    height: 150px;
+    text-align: center;
 }
 
 #draggable{
     position: absolute;
+}
+
+.drop-zone{
+  text-align: center;
 }
 </style>

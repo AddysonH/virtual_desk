@@ -6,20 +6,6 @@
       <DeskComponent id=grid-1/>   
       </DeskComponent>
 
-      <div class="drop-zone" @drop='onDrop($event, 1)' @dragover.prevent @dragenter.prevent>
-            <div v-for="item in listOne" :key="item.title" class="drag-el" draggable @dragstart= 'startDrag($event, item)'>
-              {{item.title}}    
-            </div>
-      </div>
-
-      <div class="drop-zone" @drop='onDrop($event, 2)' @dragover.prevent @dragenter.prevent>
-            <div v-for="item in listTwo" :key="item.title" class="drag-el" draggable @dragstart= 'startDrag($event, item)'>
-              {{item.title}}    
-            </div>
-      </div>
-    
-      
-
     </main>
   </div>
 </template>
@@ -35,48 +21,6 @@ export default {
     DeskComponent,
     NavbarComponent
   },
- 
-data () {
-    return { 
-      items: [
-      { id: 0, 
-        title: 'Item A', 
-        list: 1
-      },
-      { id: 1, 
-         title: 'Item B', 
-         list: 1
-      },
-      { id: 2, 
-        title: 'Item C', 
-        list: 2
-        },
-    ]}
-    },
-    computed: {
-
-      listOne () {
-          return this.items.filter(items => items.list === 1)
-      },
-      listTwo (){
-        return this.items.filter(items => items.list ===2)
-      }
-    },
-    
-methods: {
-
-  startDrag: (evt, item) => {
-    evt.dataTransfer.dropEffect = 'move'
-    evt.dataTransfer.effectAllowed = 'move'
-    evt.dataTransfer.setData('itemID', item.id)
-  },
-
-  onDrop (evt, list) {
-    const itemID = evt.dataTransfer.getData('itemID')
-    const item = this.items.find(item => item.id == itemID)
-    item.list = list
-  }
-}
 }
 </script>
 
@@ -89,7 +33,7 @@ body{
 .flexbox {
   display: flex;
   width:100%;
-  max-width: 768px;
+  max-width: 800px;
   margin: 0 auto;
   display: flex;
   flex-direction: column;

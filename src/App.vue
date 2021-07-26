@@ -39,31 +39,11 @@ body{
   flex-direction: column;
   background-color: #313131;
   padding: 15px 25px;
-  background-color: #F3f3f3;
+  background-color: #ffc06e;
+  background-image: url(https://officialpsds.com/imageview/7v/38/7v38wk_large.png?1529339811);
+  background-repeat: no-repeat;
+  background-position: center center;
 }
-
-/* .redBox {
-  width: 100px;
-  height: 100px;
-  background-color: red;
-  cursor: pointer;
-  text-align: center;
-  position: relative;
-}
-.greenBox {
-  width: 100px;
-  height: 100px;
-  background-color: green;
-  cursor: pointer;
-  text-align: center;
-}
-.purpleBox {
-  width: 100px;
-  height: 100px;
-  background-color: purple;
-  cursor: pointer;
-  text-align: center;
-} */
 
 .grid {
   display: grid;

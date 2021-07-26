@@ -37,31 +37,10 @@ export default{
         }
       ]
     }
-    },
-    // computed: {
-
-    //   listOne () {
-    //       return this.items.filter(items => items.list === 1)
-    //   },
-    //   listTwo (){
-    //     return this.items.filter(items => items.list ===2)
-    //   }
-    // },
     
-// methods: {
+    },
+    
 
-//   startDrag: (evt, item) => {
-//     evt.dataTransfer.dropEffect = 'move'
-//     evt.dataTransfer.effectAllowed = 'move'
-//     evt.dataTransfer.setData('itemID', item.id)
-//   },
-
-//   onDrop (evt, list) {
-//     const itemID = evt.dataTransfer.getData('itemID')
-//     const item = this.items.find(item => item.id == itemID)
-//     item.list = list
-//   }
-// }
 }
 </script>
 
@@ -72,6 +51,7 @@ export default{
     width: 150px;
     height: 150px;
     text-align: center;
+    margin-bottom: 10px;
 }
 
 #draggable{
@@ -80,5 +60,6 @@ export default{
 
 .drop-zone{
   text-align: center;
+
 }
 </style>

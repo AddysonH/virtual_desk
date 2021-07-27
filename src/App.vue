@@ -40,7 +40,9 @@ body{
   background-color: #313131;
   padding: 15px 25px;
   background-color: #ffc06e;
-  background-image: url(https://officialpsds.com/imageview/7v/38/7v38wk_large.png?1529339811);
+  /* background-image: url(https://officialpsds.com/imageview/7v/38/7v38wk_large.png?1529339811); */
+    background-image: url('./assets/CSS/slava-keyzman-ZG4Y6ILPARw-unsplash.jpg');
+  background-size: 800px;
   background-repeat: no-repeat;
   background-position: center center;
 }

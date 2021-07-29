@@ -1,25 +1,27 @@
 <template>
   <div id="app">
-      <NavbarComponent/>
+      <!-- <NavbarComponent/>
 
-      <main class="flexbox">
+    <main class="flexbox">
       <DeskComponent id=grid-1/>   
       </DeskComponent>
-
-    </main>
+    </main> -->
+    <router-link to='/'>Home</router-link>
+    <router-link to='Cows'>Cows</router-link>
+    <router-view/>
   </div>
 </template>
 
 <script>
 
-import DeskComponent from './components/DeskComponent.vue';
-import NavbarComponent from './components/NavbarComponent.vue';
+// import DeskComponent from './components/DeskComponent.vue';
+// import NavbarComponent from './components/NavbarComponent.vue';
 
 export default {
   name: 'App',
   components: {
-    DeskComponent,
-    NavbarComponent
+    // DeskComponent,
+    // NavbarComponent
   },
 }
 </script>
